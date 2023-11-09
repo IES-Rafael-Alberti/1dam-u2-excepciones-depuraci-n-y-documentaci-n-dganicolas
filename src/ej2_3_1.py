@@ -5,14 +5,7 @@ def frase_edades(edad):
 
 def pregunta_edad():
     
-    try:
         años= input("dime tu edad: ")
-    
-        if años == str:
-            print()
-    except ValueError:
-        print("La edad debe de ser un numero")
-            
         años =int(años)
         return años
 def edades (edad):
@@ -28,8 +21,13 @@ def edades (edad):
     
 
 def main():
-    años = pregunta_edad()
-    print(edades(años))
+    try:
+        años = pregunta_edad()
+        print(edades(años))
+    except ValueError as e:
+        print(e)
+        print("La edad debe de ser un numero")
+
 
 if __name__ == "__main__":
     main()
