@@ -10,9 +10,11 @@ def pregunta_edad():
         return años
 def edades (edad):
     edad = edad
-    edad_texto = 0
+    edad_texto = 1
     serie_edad= "has cumplido " +str(edad_texto) + " años."
-    cont=0
+    cont=1
+    if edad < 0:
+        raise ValueError ("Illo edad negativa no, churra")
     while cont < edad:
         edad_texto+=1
         serie_edad+=frase_edades(edad_texto)
@@ -26,7 +28,6 @@ def main():
         print(edades(años))
     except ValueError as e:
         print(e)
-        print("La edad debe de ser un numero")
 
 
 if __name__ == "__main__":
