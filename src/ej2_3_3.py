@@ -1,5 +1,6 @@
 #Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla la cuenta atrás desde ese número hasta cero separados por comas. Deberá solicitar el número hasta introducir uno correcto.
 def contador (num1):
+    """devuelve una serie de numero de x a 0"""
     serie = str(num1)
     num1-=1
     if num1 < 0:
